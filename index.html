@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="body">
+    <h1 class="title">Event calendar</h1>
+    <div class="container">
+        <div class="month">
+            <button class="prev btn" id="prev" type="button">
+                <svg fill="#534666" height="30px" width="30px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 404.258 404.258" xml:space="preserve">
+                    <polygon
+                        points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 " />
+                </svg>
+            </button>
+            <p class="month-item"></p>
+            <p class="year-item"></p>
+            <button class="next btn" id="next" type="button">
+                <svg fill="#534666" height="30px" width="30px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 404.258 404.258" xml:space="preserve">
+                    <polygon
+                        points="138.331,0 114.331,18 252.427,202.129 114.331,386.258 138.331,404.258 289.927,202.129 " />
+                </svg>
+            </button>
+        </div>
+        <div class="week">
+            <p class="week-item">Sun</p>
+            <p class="week-item">Mon</p>
+            <p class="week-item">Tue</p>
+            <p class="week-item">Wed</p>
+            <p class="week-item">Thu</p>
+            <p class="week-item">Fri</p>
+            <p class="week-item">Sat</p>
+        </div>
+        <div class="day" id="day"></div>
+    </div>
+
+
+    <div class="modal event-overview">
+        <svg class="modal-close" width="15" height="15" viewBox="0 0 24 24">
+            <path
+                d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+        </svg>
+        <h2 class="event-title">Details of event</h2>
+        <button class="button" id="btn-1" type="button">Add an event</button>
+    </div>
+
+    <form class="modal add-event" action="https://fom.in.ua/echo" method="post">
+        <svg class="modal-close" width="15" height="15" viewBox="0 0 24 24">
+            <path
+                d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+        </svg>
+        <h2 class="event-title">Adding an event</h2>
+        <p class="event-item add-date-time"><span class="weekday-event"></span>, <span class="event-day"></span>
+        </p>
+        <p>
+            <label class="event-item add-time-event">Time:
+                <input type="time" name="add-time-event">
+            </label>
+        </p>
+        <p>
+            <label class="event-item add-event-type">Type of event:
+                <input type="text" name="add-event-type">
+            </label>
+        </p>
+        <p>
+            <label class="event-item add-home-team">Home team:
+                <input type="text" name="add-home-team">
+            </label>
+        </p>
+        <p>
+            <label class="event-item add-away-team">Away team:
+                <input type="text" name="add-away-team">
+            </label>
+        </p>
+        <button class="button" id="btn-2" type="submit">Add to calendar</button>
+        <button class="button" type="reset">Reset</button>
+    </form>
+
+    <div class="modal-overlay"></div>
+</body>
+<!-- <script type="text/javascript" src="data.json"></script> -->
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>
